@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <title>Portfolio | Hobbies</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <main class="hobbies-page">
+    <header class="hobbies-container">
+        <h1>My Hobbies</h1>
+        <p>Outside of web development, I enjoy hands-on activities that keep my mind and body active. Whether I’m fixing a gadget or working out at the gym, I like taking on challenges that help me learn new things, get better at what I do, and build something I can be proud of.</p>
+    </header>
+
+
+    <div class="hobbies-list-container">
+    <section class="hobbies-list">
+        <div class="hobby-item">
+            <h2>🔧 Fixing Devices</h2>
+            <p>I’ve always been curious about how things work. I enjoy taking apart gadgets—like laptops, phones, or even watches—figuring out what’s wrong, and trying to fix them.</p>
+        </div>
+        
+        <div class="hobby-item">
+            <h2>🏋️‍♂️ Fitness & Strength Training</h2>
+            <p>The gym is my go-to place to clear my head and challenge myself. For me, it’s not just about building strength—it’s about staying consistent, pushing past limits, and growing both mentally and physically.</p>
+        </div>
+        
+        <div class="hobby-item">
+            <h2>🚴 Riding Bikes</h2>
+            <p>Riding my bike gives me a sense of freedom. I love the fresh air, the open road, and the chance to explore new places while staying active.</p>
+        </div>
+    </section>
+        <section class="hobbies-list">
+        <div class="hobby-item">
+            <h2>🚶 Walking & Exploring</h2>
+            <p>It helps me relax, reset my thoughts, and notice the little things around me that I might otherwise miss.</p>
+        </div>
+        
+        <div class="hobby-item">
+            <h2>🎵 Music</h2>
+            <p>Music is a big part of my day—it helps me focus, lifts my mood, and adds energy or calm depending on what I need. It’s like a soundtrack to whatever I’m doing.</p>
+        </div>
+        
+        <div class="hobby-item">
+            <h2>🎙️ Podcasts</h2>
+            <p>I enjoy listening to podcasts that make me think, introduce me to new ideas, or just keep me entertained while I’m doing other things. It’s a great way to learn and stay inspired.</p>
+        </div>
+    </section>
+</main>
+    {% endblock %}
+</body>
+</html>

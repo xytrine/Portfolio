@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <title>Portfolio | Milestones</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <main class="milestones-page">
+    <header class="milestones-container">
+        <h1>School Milestones</h1>
+        <p>Every step I take is part of my growth—whether it's learning a new design concept, getting better at HTML and CSS, or starting to explore JavaScript. From building my first responsive web page to improving how users interact with a layout, each small win keeps me excited to keep learning and growing in web development.</p>
+    </header>
+    <section class="milestones-list">
+        <div class="milestone-item">
+            <i class="ri-award-line"></i>
+            <h2>Elementary Graduate</h2>
+            <p>San Francisco Elementary School — Graduated in 2016.</p>
+        </div>
+        <div class="milestone-item">
+            <i class="ri-award-line"></i>
+            <h2>High School Graduate</h2>
+            <p>Doña Asuncion Lee Integrated School — Graduated in 2020.</p>
+        </div>
+        <div class="milestone-item">
+            <i class="ri-graduation-cap-line"></i>
+            <h2>Senior High School Graduate</h2>
+            <p>System Plus College Foundation — Graduated in 2023.</p>
+        </div>
+        <div class="milestone-item">
+            <i class="ri-git-repository-line"></i>
+            <h2>College Student</h2>
+            <p>Mabalacat City College — Started in 2024.</p>
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>

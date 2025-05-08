@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <title>Navigation</title>
+</head>
+<body>
+    <header class="base-header">
+        <nav>
+            <ul>
+                <li><a href="/">
+                    <i class="ri-home-4-line"> Home</i>
+                </a></li>
+                <li><a href="/about">
+                    <i class="ri-information-line"> About</i>
+                </a></li>
+                <li><a href="/hobbies">
+                    <i class="ri-computer-line"> Hobbies</i>
+                </a></li>
+                <li><a href="/food">
+                    <i class="ri-restaurant-2-line"> Food</i>
+                </a></li>
+                <li><a href="/profession">
+                    <i class="ri-user-star-fill"> Profession</i>
+                </a></li>
+                <li><a href="/milestones">
+                    <i class="ri-focus-line"> School Milestone</i>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Andrei's Portfolio, All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tagesschrift&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #fefae0;
+  --color-secondary: #f0f0f0;
+  --color-hover: #d18f48;
+  --color-background: #606c38;
+  --color-button: #bc6c25;
+  --color-optional: #283618;
+  --font-family-heading: 'Lora', sans-serif;
+  --font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23080b05' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2310160a' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2318200e' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23202b13' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23283618' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Base-design */
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.base-header {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  list-style: none;
+  padding-right: 2%;
+  margin: 0 2rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav > ul > li {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: var(--font-family);
+}
+
+nav li a {
+  position: relative;
+  cursor: pointer;
+
+}
+
+
+nav li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: 0.5s ease;
+}
+
+nav a:hover {
+  color: var(--color-hover);
+}
+
+nav a:active {
+  color: var(--color-button);
+}
+
+nav a:hover::before {
+  width: 70%;
+  background-color: var(--color-hover);
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px;
+  color: var(--color-primary);
+}
+/* End of Base-design */
+
+
+/* Index-Design */
+.head-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.head-container h1 {
+  font-family: var(--font-family-heading);
+  font-size: 11rem;
+  font-style: italic;
+  
+}
+
+#span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: var(--color-primary) 3px;
+}
+
+.head-container p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* End of Index-Design */
+
+/* About-Design */
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  text-align: justify;
+  color: var(--color-primary);
+}
+
+.container-about h1 {
+  font-family: var(--font-family-heading);
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.container-about p {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.btn-container a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.btn-container a:hover {
+  color: var(--color-optional);
+}
+
+.btn {
+  border: none;
+  background-color: var(--color-button);
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+
+.btn:hover {
+  background-color: var(--color-hover);
+}
+
+/* End of About-Design */
+
+/* Hobbies-Design */
+.hobbies-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  color: var(--color-primary);
+}
+
+.hobbies-container h1 {
+  font-family: var(--font-family-heading);
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.hobbies-container p {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.hobbies-list-container {
+  display: grid;
+  grid-template-columns: repeat auto(2, 6fr);
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  color: var(--color-primary);
+}
+
+.hobbies-list {
+  padding-bottom: 50px;
+}
+
+.hobbies-list h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+
+.hobbies-list p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.hobby-item {
+  border: solid 2px var(--color-primary);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* End of Hobbies-Design */
+
+/* Food-Design */
+.food-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  color: var(--color-primary);
+}
+
+.food-container h1 {
+  font-family: var(--font-family-heading);
+  font-size: 7rem;
+  font-style: italic;
+}
+.food-container p {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.food-list {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.food-item{
+  border: solid 2px var(--color-primary);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.food-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-family: var(--font-family-heading);
+}
+
+.food-item p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+/* End of Food-Design */
+
+/* Profession-Design */
+
+.profession-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  color: var(--color-primary);
+}
+
+.profession-container h1 {
+  font-family: var(--font-family-heading);
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.profession-container p {
+  max-width: 1200px;
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+.profession-list {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 50px;
+  color: var(--color-primary);
+}
+
+.profession-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 30px 0;
+
+  h2 {
+    font-family: var(--font-family-heading);
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+
+
+.profession-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  border-bottom: 2px solid var(--color-primary);
+  padding: 30px 0;
+
+  h2 {
+    font-family: var(--font-family-heading);
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+
+.profession-item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--color-primary);
+  padding: 30px 0;
+
+  h2 {
+    font-family: var(--font-family-heading);
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+
+/* End of Profession-Design */
+
+/* Milestones-Design */
+.milestones-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  color: var(--color-primary);
+}
+.milestones-container h1 {
+  font-family: var(--font-family-heading);
+  font-size: 7rem;
+  font-style: italic;
+  margin: 5px 0;
+}
+.milestones-container p {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.milestones-list {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  color: var(--color-primary);
+}
+
+.milestone-item {
+  border: solid 2px var(--color-primary);
+  border-radius: 10px;
+  padding: 13px;
+  margin: 10px;
+}
+
+.milestone-item h2{
+  font-size: 1.6rem;
+  font-family: var(--font-family-heading);
+  margin: 5px 0;
+}
+
+.milestone-item p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.ri-git-repository-line, .ri-graduation-cap-line, .ri-award-line {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  background-color: var(--color-button);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+/* Main-Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* End of Main-Animation */
+
+/* Media Queries */
+
+
+/* Media Queries 1600px*/
+@media only screen and (max-width: 1600px) {
+  .container-about {
+    width: 75%;
+    margin: auto;
+  }
+  .container-about h1 {
+    font-size: 6rem;
+  }
+  
+  .container-about p {
+    font-size: 1rem;
+  }
+
+  .hobbies-page {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .food-page {
+    width: 80%;
+    margin: auto;
+  }
+
+  .milestones-page {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* Media Queries 1400px*/
+@media only screen and (max-width: 1400px) {
+  .container-about {
+ width: 70%;
+ margin: auto;
+}
+.container-about h1 {
+ font-size: 6rem;
+}
+
+.container-about p {
+ font-size: 1rem;
+}
+
+.hobbies-page {
+  width: 70%;
+  margin: auto;
+}
+
+.hobbies-page h1{
+ font-size: 5rem;
+}
+
+.hobbies-page h2 {
+  font-size: 1.2rem;
+}
+
+.hobbies-page p{
+  font-size: 1rem;
+ }
+
+ .food-page {
+  width: 70%;
+  margin: auto;
+}
+
+ .food-page h1{
+  font-size: 5rem;
+ }
+ 
+ .food-page p{
+   font-size: 1rem;
+  }
+
+  .food-item h2 {
+    font-size: 1.2rem;
+  }
+
+
+  .milestones-page {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+  
+   .milestones-page h1{
+    font-size: 5rem;
+   }
+   
+   .milestones-page p{
+     font-size: 1rem;
+    }
+  
+    .milestones-item h2 {
+      font-size: 1.2rem;
+    }
+  
+    .profession-page {
+      width: 70%;
+      margin: auto;
+    }
+    
+    .profession-page h1{
+     font-size: 5rem;
+    }
+    
+    .profession-page h2 {
+      font-size: 1.2rem;
+    }
+    
+    .profession-page p{
+      font-size: 1rem;
+     }
+
+}
+
+
+
+/* Media Queries 1300px*/
+@media only screen and (max-width: 1300px) {
+  .head-container {
+    width: 100%;
+  }
+  .head-container h1 {
+    font-size: 9rem;
+  }
+  .about-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  
+  .container-about {
+    width: 60%;
+    margin: auto;
+  }
+  .container-about h1 {
+    font-size: 5rem;
+  }
+  
+  .container-about p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Queries 1200px*/
+@media only screen and (max-width: 1200px) {
+  .head-container {
+    width: 100%;
+  }
+  
+  .head-container h1 {
+    font-size: 7rem;
+  }
+
+  .container-about h1 {
+    font-size: 4rem;
+  }
+  
+  .container-about p {
+    font-size: 0.8rem;
+  }
+
+  .hobbies-page h1{
+    font-size: 4rem;
+   }
+   
+   .hobbies-page p{
+     font-size: 0.8rem;
+    }
+
+    .hobby-item h2 {
+      font-size: 1.2rem;
+    }
+    .food-page h1{
+      font-size: 4rem;
+     }
+     
+     .food-page p{
+       font-size: 0.8rem;
+      }
+  
+      .food-item h2 {
+        font-size: 1.2rem;
+      }
+      .milestones-page h1{
+        font-size: 4rem;
+       }
+       
+       .milestones-page p{
+         font-size: 0.8rem;
+        }
+    
+        .milestone-item h2 {
+          font-size: 1.2rem;
+        }
+        .profession-page h1{
+          font-size: 4rem;
+         }
+         
+         .profession-page p{
+           font-size: 0.8rem;
+          }
+      
+          .profession-item h2 {
+            font-size: 1.2rem;
+          }
+}
+
+/* Media Queries 992px*/
+@media only screen and (max-width: 992px) {
+  .head-container {
+    width: 100%;
+  }
+  
+  .head-container h1 {
+    font-size: 5rem;
+  }
+
+  .head-container p {
+    font-size: 0.8rem;
+  }
+
+  .base-header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .base-header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .base-header li {
+    margin: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .about-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  
+  .container-about {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .milestones.list {
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  }
+
+}
+
+/* Media Queries 768px*/
+@media only screen and (max-width: 768px) {
+  .head-container {
+    width: 100%;
+  }
+  
+  .head-container h1 {
+    font-size: 5rem;
+    
+  }
+
+  .head-container p {
+    font-size: 0.8rem;
+  }
+
+  .base-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .base-header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .base-header li {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+  .head-container {
+    width: 100%;
+  }
+  
+  .head-container h1 {
+    font-size: 4rem;
+  }
+
+  .head-container p {
+    font-size: 0.8rem;
+  }
+
+  .base-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    width: 100%;
+  }
+  .base-header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .base-header li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Media Queries 600px*/
+@media only screen and (max-width: 600px) {
+  .head-container {
+    width: 100%;
+  }
+  
+  .head-container h1 {
+    font-size: 4rem;
+  }
+
+  .head-container p {
+    font-size: 0.8rem;
+  }
+
+  .base-header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .base-header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .base-header li {
+    margin: 0 2rem;
+    font-size: 0.8rem;
+  }
+}

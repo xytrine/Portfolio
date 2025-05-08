@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <title>Portfolio | About me</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <header class="about-container">
+        <div class="container-about">
+        <h1>About me!</h1>
+            <p>I'm an IT student at Mabalacat City College, continuously developing my skills in web development. While I started with static websites, I’ve expanded my knowledge to include HTML, CSS, JavaScript, and now exploring backend technologies like PHP, Flask, and Python.
+                </p>
+            <p>
+                I’m passionate about learning and refining my abilities, always looking for opportunities to work on real-world projects that challenge me and help improve my skills and techniques. Every project I take on pushes me forward, whether it's designing responsive layouts, integrating databases, or building dynamic applications.
+            </p>
+            <div class="btn-container">
+                <a href="https://github.com/xytrine/"><button class="btn">Github
+                </a></button>
+                <a href="https://www.linkedin.com/in/andrei-gueco-118b39323/"><button class="btn">LinkedIn
+             </a></button>
+             </div>
+        </div>
+    </header>
+    {% endblock %}
+</body>
+</html>
